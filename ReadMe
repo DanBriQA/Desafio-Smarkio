@@ -1,0 +1,44 @@
+Esse projeto foi feito através da linguagem de prpogramação Ruby 
+Com as seguintes ferramentas:
+- Cucumber 
+- Capybara
+- Selenium-WebDriver
+- RSpec
+- Allure
+
+* Comandos utilizados no projeto *
+
+- Criar o arquivo Gemfile 
+gem install bundler
+
+- Instalação das gems
+bundler install
+
+- Criar projeto de teste Ruby
+cucumber --init
+
+- Gerar relatório Allure
+allure serve logs\
+
+
+O projeto para automatização do site da Casas Bahia, é separado por pastas onde explicarei a funçãode cada uma delas
+
+- Feature: Pasta principal onde é alocada 3 outras pastas - Specs, step_definitions, support 
+
+- Spec: Pasta onde colocamos o arquivo com a formatação em BDD com a regra de negócio onde temos a
+noção de como ocorrerá o teste, todos esses cenários são escritos ‘Gherkin’  
+
+- step_definitions: Arquivo onde fica a codificação propriamente dita do teste 
+
+- support: Onde fica alocada as configurações do projeto e a pasta page já que a automação foi feita no padrão Page Object
+  *local.yml - arquivo com a URL principal
+  *env.rb - configuração do Capybara, Allure e Browser de sua preferência
+  *hooks.rb - arquivo com comandos que deve ocorrer antes e depois dos testes
+  - pages é a pasta onde colocamos o arquivo para colocar no padrão page object que no caso é o carrinho_page.rb
+
+- logs é onde temos informações em JSON e Screenshots 
+
+-Gemfile é onde instalamos nos gems     
+
+
+
